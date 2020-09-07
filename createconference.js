@@ -18,7 +18,8 @@ function saveconference(source, room) {
 	e.preventDefault()
 	
 	var formData = {
-	'name' : $(this).attr('data-name')
+	'name' : $(this).attr('data-name'),
+	'occupants' : occupants // максимальное кооличество участников конференции, необходимо дл билинга
 	}
 	$.ajax({
             type        : 'POST', 
